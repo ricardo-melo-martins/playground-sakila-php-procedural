@@ -4,7 +4,7 @@
 
 </div>
 
-# Slim 4 Boilerplate
+# Slim 4 Api Skeleton
 
 Este é um micro esqueleto baseado no framework Slim 4 e PSR-7.
 
