@@ -1,0 +1,23 @@
+{
+    "name": "ricardo-melo-martins/slim4-boilerplate",
+    "authors": [
+        {
+            "name": "Ricardo Melo Martins",
+            "homepage": "https://github.com/ricardo-melo-martins"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "nyholm/psr7": "^1.8",
+        "nyholm/psr7-server": "^1.1",
+        "guzzlehttp/psr7": "2",
+        "laminas/laminas-diactoros": "^3.3"
+    },
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S 0.0.0.0:8080 -t public"
+        ]
+    }
+}
