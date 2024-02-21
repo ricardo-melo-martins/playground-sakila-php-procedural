@@ -1,1 +1,10 @@
 /vendor/
+.tmp
+*.log
+
+/tmp/cache/*
+/tmp/indexes/*
+/tmp/logs/*
+/tmp/sessions/*
+
+/storage/uploads/*
