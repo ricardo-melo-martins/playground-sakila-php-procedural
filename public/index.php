@@ -9,7 +9,7 @@ use Psr\Container\ContainerInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Views\PhpRenderer;
-use Slim\Routing\RouteCollectorProxy;
+
 
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
@@ -24,12 +24,9 @@ use Monolog\Handler\RotatingFileHandler;
 
 use APP\common\handlers\response\JsonResponse;
 
-use APP\apps\public\Controller\IndexController;
-use APP\apps\public\Controller\ApiController;
 use APP\apps\public\Controller\AbstractController;
 
-
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'../../src/core/bootstrap.php';
 
 
 $settings = [];
@@ -51,13 +48,7 @@ $container_config = [
 
       $app->addBodyParsingMiddleware();
 
-      $app->get('/', IndexController::class)->setName('index');
-
-      $app->group('/api', function (RouteCollectorProxy $group) {
-
-          $group->get('[/]', ApiController::class)->setName('index');
-
-      });
+      (require __DIR__ . '../../src/apps/public/routes/public.php')($app);
 
       return $app;
   },
