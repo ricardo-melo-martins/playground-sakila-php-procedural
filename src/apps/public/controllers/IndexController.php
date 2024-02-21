@@ -1,10 +1,10 @@
 <?php
 
-namespace APP\apps\public\Controller;
+namespace APP\Apps\Public\Controllers;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use APP\apps\public\Controller\AbstractController;
+use APP\Apps\Public\Controllers\AbstractController;
 
 class IndexController extends AbstractController
 {

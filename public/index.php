@@ -22,33 +22,24 @@ use Monolog\Handler\FirePHPHandler;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RotatingFileHandler;
 
-use APP\common\handlers\response\JsonResponse;
-
-use APP\apps\public\Controller\AbstractController;
+use APP\Apps\Public\Controllers\AbstractController;
 
 require __DIR__.'../../src/core/bootstrap.php';
 
 
-$settings = [];
-
-$settings['logger'] = [
-    // Log file location
-    'path' => __DIR__ . '/../tmp/logs',
-    // Default log level
-    'level' => \Psr\Log\LogLevel::DEBUG,
-];
-
 $container_config = [
 
-  'settings' => fn ($setting) =>  $settings,
+  'settings' => fn ($setting) =>  (require __DIR__.'../../src/core/config/settings.php'),
 
   App::class => function (ContainerInterface $container) {
 
       $app = AppFactory::createFromContainer($container);
 
-      $app->addBodyParsingMiddleware();
+      // $app->addBodyParsingMiddleware();
 
       (require __DIR__ . '../../src/apps/public/routes/public.php')($app);
+
+      (require __DIR__ . '../../src/apps/public/middlewares/public.php')($app);
 
       return $app;
   },

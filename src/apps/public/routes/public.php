@@ -2,8 +2,8 @@
 use Slim\App;
 use Slim\Routing\RouteCollectorProxy;
 
-use APP\apps\public\Controller\IndexController;
-use APP\apps\public\Controller\ApiController;
+use APP\Apps\Public\Controllers\IndexController;
+use APP\Apps\Public\Controllers\ApiController;
 
 return function (App $app)
 {

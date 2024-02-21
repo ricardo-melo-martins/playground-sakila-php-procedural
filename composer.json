@@ -26,5 +26,8 @@
             "Composer\\Config::disableProcessTimeout",
             "php -S 0.0.0.0:8080 -t public"
         ]
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.4"
     }
 }
