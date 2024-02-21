@@ -35,8 +35,6 @@ $container_config = [
 
       $app = AppFactory::createFromContainer($container);
 
-      // $app->addBodyParsingMiddleware();
-
       (require __DIR__ . '../../src/apps/public/routes/public.php')($app);
 
       (require __DIR__ . '../../src/apps/public/middlewares/public.php')($app);
