@@ -14,7 +14,7 @@ class IndexController extends AbstractController
         $this->logger->debug('IndexController requisitado');
 
         $payload = 'Welcome!';
-        $response->getBody()->write($payload);
-        return $response;
+
+        return $this->response->html($response, $payload);
     }
 }

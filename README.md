@@ -21,6 +21,8 @@ Auxilia na criação acelerada de aplicações, poc's e estudos da tecnologia.
 - PSR-7 Standard
 - Logs em arquivos usando Monolog
 - Injeção de dependência usando PHP-DI
+- Vardump (Dev) do Symfony
+- Response Handlers (Json, html)
 
 ## Descrição
 
