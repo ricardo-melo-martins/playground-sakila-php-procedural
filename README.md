@@ -6,9 +6,21 @@
 
 # Slim 4 Api Skeleton
 
-Este é um micro esqueleto baseado no framework Slim 4 e PSR-7.
+Este é um micro esqueleto baseado no framework Slim 4 e compatível com PSR-7.
 
 Auxilia na criação acelerada de aplicações, poc's e estudos da tecnologia.
+
+## Requisitos
+
+- Composer 2.x
+- PHP 8.x
+- Docker (opcional)
+
+## Características
+
+- PSR-7 Standard
+- Logs em arquivos usando Monolog
+- Injeção de dependência usando PHP-DI
 
 ## Descrição
 
@@ -17,13 +29,13 @@ Auxilia na criação acelerada de aplicações, poc's e estudos da tecnologia.
 
 ## Instalar
 
-```bash
+```powershell
 $ composer install
 ```
 
 ## iniciar
 
-```bash
+```powershell
 $ composer serve
 ```
 
@@ -31,8 +43,8 @@ $ composer serve
 
 Verifica se esta online usando `curl`
 
-```bash
-curl --request GET --url http://localhost:8080/ 
+```powershell
+$ curl --request GET --url http://localhost:8080/ 
 
 ```
 
